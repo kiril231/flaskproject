@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+</head>
+<body>
+    <h1>Регестрація</h1>
+    <form action="{{url_for('registr')}}" method="post">
+        <label for="username">Ім'я користувача</label>
+        <input type="text" name="username" >
+        <label for="author">Пароль</label>
+        <input type="password" name="password" >
+        <label for="name">ПІБ</label>
+        <input type="text" name="name" >
+        <label for="email">Email</label>
+        <input type="email" name="email" >
+        
+        <button type="submit">Увійти</button>
+    </form>
+</body>
