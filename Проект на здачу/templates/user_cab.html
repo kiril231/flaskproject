@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+    {% block content %}
+    <title>Особистий кабінет {{username}}</title>
+    <h1 align="center">Класи користувача {{username}}</h1>
+<div class="row">
+    {% for subject in subjects %}
+    <div class="col-md-6">
+        <p>{{ subject.title }}, {{ subject.teacher }}, {{ subject.study_account_materials }} - {{ subject.grade }}</p>
+    </div>
+
+    <br>
+    {% endfor %}
+</div>
+  {% endblock %}

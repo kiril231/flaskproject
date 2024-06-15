@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<title>Предмети</title>
+<div class="row">
+    {% for subject in subjects %}
+    <div class="col-md-6">
+        <p>{{ subject.title }}, {{ subject.teacher }}, {{ subject.study_account_materials }} - {{ subject.grade }}</p>
+    </div>
+            <button type="submit" class="btn btn-outline-success">
+                <a href="{{ url_for('useradd', subject_id=subject.id) }}">Додати учня</button>
+            </button>
+            <button class="btn btn-outline-danger">
+                <a href="{{ url_for('deleteSubject', subject_id=subject.id) }}" style="text-decoration: none">Видалити</a>
+            </button>
+    <br>
+    {% endfor %}
+</div>
+{% endblock %}

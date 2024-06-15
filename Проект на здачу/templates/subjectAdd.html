@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<title>Додати предмет</title>
+<h1><label class="form-label">Додати предмет</label></h1>
+<form action="/cabinet/classes/" method="post">
+    <label for="nameSubject" class="form-label">Назва</label>
+    <input type="text" name="name" class="form-control" id="nameSubject" required>
+
+    <label for="teacherSubject" class="form-label">Вчитель</label>
+    <input type="text" name="teacher" class="form-control" id="teacherSubject" required>
+
+    <label for="studymaterialsSubject" class="form-label">Облікові матеріали</label>
+    <input type="text" name="study_account_materials" class="form-control" id="studymaterialsSubject">
+
+    <label for="gradeBook" class="form-label">Оцінка</label>
+    <input type="number" name="grade" class="form-control" id="gradeBook">
+
+    <button type="submit" class="btn btn-outline-success">Додати</button>
+</form>
+
+{% if error %}
+<div class="alert alert-danger" role="alert">
+    {{ error }}
+</div>
+{% endif %}
+{% endblock %}
