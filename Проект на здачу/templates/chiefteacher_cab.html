@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+    {% block content %}
+    <title>Особистий кабінет {{username}}</title>
+<form class="d-flex" action="{{url_for('newSubject')}}" method="post">
+    <button class="btn btn-outline-success" type="submit">Додати предмет</button>
+</form>
+<form class="d-flex" action="{{url_for('subjects')}}" method="post">
+    <button class="btn btn-outline-success" type="submit">Переглянути предмети</button>
+</form>
+
+  {% endblock %}
